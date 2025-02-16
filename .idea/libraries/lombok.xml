@@ -1,0 +1,46 @@
+<component name="libraryTable">
+  <library name="lombok">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/Downloads/lombok.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/slf4j-api-2.0.16.jar!/" />
+      <root url="file://$PROJECT_DIR$/.." />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/../ANIKET SUTHAR/JAVA/ANIKET NEW/MODULE 1/src" />
+      <root url="file://$PROJECT_DIR$/../ANIKET SUTHAR/JAVA/ANIKET NEW/OOPS/src" />
+      <root url="file://$PROJECT_DIR$/../ANIKET SUTHAR/JAVA/com.Aniket" />
+      <root url="file://$PROJECT_DIR$/../ANIKET SUTHAR/JAVA/com.Aniket/DSA 29_8/src" />
+      <root url="file://$PROJECT_DIR$/../ANIKET SUTHAR/JAVA/com.Aniket/GUI_BRO-CODE/src" />
+      <root url="file://$PROJECT_DIR$/../ANIKET SUTHAR/JAVA/com.Aniket/JAVA DSA/src" />
+      <root url="file://$PROJECT_DIR$/../ANIKET SUTHAR/JAVA/com.Aniket/LEC 10_10_22/src" />
+      <root url="file://$PROJECT_DIR$/../ANIKET SUTHAR/JAVA/com.Aniket/LEC_14_10_22/src" />
+      <root url="file://$PROJECT_DIR$/../ANIKET SUTHAR/JAVA/com.Aniket/LEC_17_10_22/src" />
+      <root url="file://$PROJECT_DIR$/../ANIKET SUTHAR/JAVA/com.Aniket/LEC_19_10_22/src" />
+      <root url="file://$PROJECT_DIR$/../ANIKET SUTHAR/JAVA/com.Aniket/LEC_30_10_22/src" />
+      <root url="file://$PROJECT_DIR$/../ANIKET SUTHAR/JAVA/com.Aniket/MODULE 1 JAVA/ARRAYS/src" />
+      <root url="file://$PROJECT_DIR$/../ANIKET SUTHAR/JAVA/com.Aniket/MODULE 1 JAVA/src" />
+      <root url="file://$PROJECT_DIR$/../ANIKET SUTHAR/JAVA/com.Aniket/MODULE 3/src" />
+      <root url="file://$PROJECT_DIR$/../ANIKET SUTHAR/JAVA/com.Aniket/MODULE 4/src" />
+      <root url="file://$PROJECT_DIR$/../ANIKET SUTHAR/JAVA/com.Aniket/PUZZLE_GUI/src" />
+      <root url="file://$PROJECT_DIR$/../ANIKET SUTHAR/JAVA/com.Aniket/STRINGS/src" />
+      <root url="file://$PROJECT_DIR$/../ANIKET SUTHAR/JAVA/com.Aniket/SWING/src" />
+      <root url="file://$PROJECT_DIR$/../ANIKET SUTHAR/JAVA/com.Aniket/THREADSINJAVA/src" />
+      <root url="file://$PROJECT_DIR$/../ANIKET SUTHAR/JAVA/com.Aniket/src" />
+      <root url="file://$PROJECT_DIR$/../ANIKET SUTHAR/Pacman" />
+      <root url="file://$PROJECT_DIR$/../ANIKET SUTHAR/TestNGFramework/src/main/java" />
+      <root url="file://$PROJECT_DIR$/../ANIKET SUTHAR/TestNGNoMaven/src" />
+      <root url="file://$PROJECT_DIR$/../ANIKET SUTHAR/WordCount/src/main/java" />
+      <root url="file://$PROJECT_DIR$/src" />
+      <root url="file://$PROJECT_DIR$/../SEM 4 Projects + java/JAVA EXAM/src" />
+      <root url="file://$PROJECT_DIR$/../intelli_J_ULTIMATE_PROJECTS/Cookie/src/main/java" />
+      <root url="file://$PROJECT_DIR$/../intelli_J_ULTIMATE_PROJECTS/Login_Signup_page/src/main/java" />
+      <root url="file://$PROJECT_DIR$/../intelli_J_ULTIMATE_PROJECTS/untitled/src/main/java" />
+      <root url="file://$PROJECT_DIR$/../jira-api/src/main/java" />
+      <root url="file://$PROJECT_DIR$/../jira-api/src/test/java" />
+      <root url="file://$PROJECT_DIR$/.." />
+    </SOURCES>
+    <jarDirectory url="file://$PROJECT_DIR$/.." recursive="false" />
+    <jarDirectory url="file://$PROJECT_DIR$/.." recursive="false" type="SOURCES" />
+  </library>
+</component>
