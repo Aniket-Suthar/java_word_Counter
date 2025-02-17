@@ -10,6 +10,9 @@ public class MultiFileWordCounter {
     private static final String OUTPUT_FILE = "word_count_output.txt";
     private static final String LOG_FILE = "application.log";
 
+    /**
+     * This static block is used to initialized the logger for the file
+     */
     static {
         try {
             FileHandler fileHandler = new FileHandler(LOG_FILE, true);
@@ -21,6 +24,12 @@ public class MultiFileWordCounter {
         }
     }
 
+    /**
+     * This is the main methods where the submission of tasks is done to threads and after completion of
+     * tasks their results are also being taken.
+     *
+     * @param directoryPath - the folder path from where the testing files are needed to be taken.
+     */
     public static void processFiles(String directoryPath) {
         logger.log(Level.INFO, "Current thread count: {0}", THREAD_COUNT);
         File folder = new File(directoryPath);
@@ -29,26 +38,43 @@ public class MultiFileWordCounter {
             return;
         }
 
+        /**
+         * Fetching all the files from the directory and storing it in the Array of files.
+         */
         File[] files = folder.listFiles((dir, name) -> name.endsWith(".txt"));
         if (files == null || files.length == 0) {
             logger.warning("No text files found in directory.");
             return;
         }
 
+        /**
+         * Creating a buffered output stream to write the data of the word count to the output file
+         */
         try (BufferedOutputStream writer = new BufferedOutputStream(new FileOutputStream(OUTPUT_FILE, true))) {
             logger.info("Starting file processing...");
 
-            // Submit all tasks
+            /**
+             * Here the files names are fetched from the array of files and the those file names are submit to threads
+             * for counting the words.
+             */
             for (File file : files) {
                 logger.log(Level.INFO, "Submitting file: {0}", file.getName());
                 completionService.submit(new WordCountTask(file));
             }
 
-            // Retrieve results as they complete
+            /**
+             * In this we iterate over the array of files and then check whether the wordcount task is completed
+             * then take the result from the corresponding thread.
+             */
             for (int i = 0; i < files.length; i++) {
                 try {
                     Future<String> future = completionService.take(); // Get completed task
                     String result = future.get();
+
+                    /**
+                     * The syncronized block is assigned in order to make writing available for one
+                     * thread at a time to avoid inconsistency to results.
+                     */
                     synchronized (writer) {
                         writer.write(result.getBytes());
                         writer.flush();
@@ -66,13 +92,26 @@ public class MultiFileWordCounter {
         logger.info("Processing completed. Output written to " + OUTPUT_FILE);
     }
 
-    static class WordCountTask implements Callable<String> {
+    /**
+     * This static method is the main method where actual word count logic is implemented.
+     */
+    private static class WordCountTask implements Callable<String> {
         private final File file;
 
+        /**
+         * This parametric constructor is created because each thread requires the new instance of
+         * the new file
+         * @param file - the corresponding file whose word count are needed to be done.
+         */
         WordCountTask(File file) {
             this.file = file;
         }
 
+        /**
+         * This is the call method of the callable interface in order to execute the word count method
+         *
+         * @return - the word count in file
+         */
         @Override
         public String call() {
             StringBuilder result = new StringBuilder("\nFile: " + file.getName() + "\n");
